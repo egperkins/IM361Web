@@ -4,8 +4,8 @@ var app = new Vue({
   el: '#app',
   data: {
     //where are work is
-    message: 'Hello Vue!' ,
-    counter: 0 
+    child1: 'Child 1' ,
+    counter: 0
   }
 });
 
