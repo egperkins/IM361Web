@@ -8,9 +8,23 @@
   <body>
     <div id="app">
 
-      {{ child1 }}
-      <button v-on:click="counter += 1">Completed Chore</button>
-      <p>Child1 completed a chore {{ counter }} times.</p>
+
+      <p>Welcome to Connected Home</p>
+      <p>----------------------------</p>
+      <br/>
+      {{ Child1 }}
+      <button v-on:click="counter1 += 1">Completed Chore</button>
+      <p>{{ Child1 }} has completed a chore {{ counter1 }} times.</p>
+
+      <br/>
+
+      {{ Child2 }}
+      <button v-on:click="counter2 += 1">Completed Chore</button>
+      <p>{{ Child2 }} has completed a chore {{ counter2 }} times.</p>
+
+
+
+
 
     </div>
     <script src="dist/main.js" type="text/javascript"></script>
