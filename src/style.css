@@ -1,1 +1,33 @@
 
+<style>
+/* Style the body   https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_style_header */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+/* Header/Logo Title */
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #2D5A77;
+  color: white;
+  font-size: 30px;
+}
+
+.button {
+  background-color: #AADEFF;
+  border: none;
+  color: #06293E;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+
+</style>
