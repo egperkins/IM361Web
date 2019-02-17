@@ -1,18 +1,1 @@
 
-<style>
-/* Style the body from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_style_header */
-body {
-  font-family: Arial;
-  margin: 0;
-}
-/* Header/Logo Title */
-.header {
-  padding: 60px;
-  text-align: center;
-  background: ##00799E;
-  color: white;
-  font-size: 30px;
-}
-/* Page Content */
-.content {padding:20px;}
-</style>
