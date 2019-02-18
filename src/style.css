@@ -16,7 +16,9 @@ body {
 }
 
 .Welcome{
+  padding: 60px;
   text-align: center;
+  background: white;
   color: #2D5A77;
   font-size: 25px;
 }
