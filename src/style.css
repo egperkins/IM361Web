@@ -1,6 +1,10 @@
 
 <style>
+<<<<<<< HEAD
 /* Style the body   https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_style_header */
+=======
+/* Style the body */
+>>>>>>> parent of c127b33... StyleCSS Moved to Index.html
 body {
   font-family: Arial;
   margin: 0;
@@ -15,6 +19,16 @@ body {
   font-size: 30px;
 }
 
+<<<<<<< HEAD
 
 
+<<<<<<< HEAD
+=======
+
+
+=======
+/* Page Content */
+.content {padding:20px;}
+>>>>>>> parent of c127b33... StyleCSS Moved to Index.html
+>>>>>>> parent of 8d80fe0... Session3
 </style>
