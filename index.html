@@ -17,7 +17,7 @@
     </div>
 
 <!-- Home Page -->
-<main v-bind:hidden="pageName != 'home'">
+<main v-bind:hidden="pageName != 'home'" class="animated">
     <!--  Big Banner -->
         <div class="header">
           <h1>Connected Home</h1>
@@ -65,7 +65,7 @@
 
 
 <!-- New Task Page -->
-<main v-bind:hidden="pageName != 'newtask'">
+<main v-bind:hidden="pageName != 'newtask'" class="animated">
         <!--  Big Banner -->
             <div class="header">
               <h1>Connected Home</h1>
@@ -89,6 +89,9 @@
               Reward for Completion:🖖<br>
               <input type="text" name="Reward for Completion">
             </form>
+            <button class="button" v-on:click="SammieCount += 1" v-bind:disabled="SammieCount==5">Task Completed</button>
+
+
 
 </div>
 </main>
@@ -96,7 +99,7 @@
 
 
 <!-- New Task Page -->
-<main v-bind:hidden="pageName != 'about'">
+<main v-bind:hidden="pageName != 'about'" class="animated">
   <!--  Big Banner -->
       <div class="header">
         <h1>Connected Home</h1>

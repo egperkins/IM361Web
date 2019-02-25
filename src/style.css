@@ -59,6 +59,20 @@ input{
 
 }
 
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: inherit;
+  }
+}
+
+.animated {
+  animation-duration: .5s;
+  animation-name: fadein;
+}
 
 .topnav {
   overflow: hidden;
