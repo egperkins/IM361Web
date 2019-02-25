@@ -8,67 +8,116 @@
   <body>
  <div id="app">
 
-
 <!--  Navigation Bar -->
     <div class="topnav">
-      <a class="active" href="#home">Home</a>
-      <a href="#newtask">New Task</a>
-      <a href="#viewtask">Veiw Task</a>
-      <a href="#about">About</a>
+      <ul>
+      <a href="#home" v-on:click="pageName = 'home'">Home</a>
+      <a href="#newtask" v-on:click="pageName = 'newtask'">New Task</a>
+      <a href="#about" v-on:click="pageName = 'about'">About</a>
     </div>
 
-
-<!--  Big Banner -->
-    <div class="header">
-      <h1>Connected Home</h1>
-      <p>This is a paragraph that explains how to use Connected Home to assign chores to your family.</p>
-    </div>
-
-
-<!--  Welcome to the site -->
-    <div class="Welcome">
-    <h2> Family's Task Progression</h2>
-    </div>
-
-
-
-
-
-
-<!-- Emma Card -->
+<!-- Home Page -->
+<main v-bind:hidden="pageName != 'home'">
+    <!--  Big Banner -->
+        <div class="header">
+          <h1>Connected Home</h1>
+          <p>🤔 🤔 This is a paragraph that explains how to use Connected Home to assign chores to your family. 🤔 🤔</p>
+        </div>
+    <!--  Welcome to the site -->
+        <div class="Welcome">
+        <h2> Family's Task Progression</h2>
+        </div>
+    <!-- Emma Card -->
+        <div class="row">
+          <div class="column">
+            <div class="card">
+              <h3>Emma</h3>
+              <img src="https://media.defense.gov/2018/Feb/09/2001875923/780/780/0/180205-F-PJ007-1001.JPG" alt="Photo of Emma" style="width:400px;height:300px;">
+              <br>
+                <p> <b>Emma</b> - {{ EmmaCount }} of 5 Tasks Completed</p>
+              <button class="button" v-on:click="EmmaCount += 1" v-bind:disabled="EmmaCount==5">Task Completed</button>
+            </div>
+          </div>
+    <!-- John Card -->
     <div class="row">
       <div class="column">
         <div class="card">
-          <h3>Emma</h3>
-            <p> <b>Emma</b> - {{ EmmaCount }} of 5 Tasks Completed</p>
-          <button v-on:click="EmmaCount += 1" v-bind:disabled="EmmaCount==5">Task Completed</button>
+          <h3>John</h3>
+          <img src="https://ak2.picdn.net/shutterstock/videos/12027212/thumb/1.jpg" alt="Photo of John" width="400" height="300">
+          <br>
+          <p> <b>John</b> - {{ JohnCount }} of 6 Tasks Completed</p>
+          <button class="button" v-on:click="JohnCount += 1" v-bind:disabled="JohnCount==6">Task Completed</button>
         </div>
       </div>
-
-<!-- John Card -->
-<div class="row">
-  <div class="column">
-    <div class="card">
-      <h3>John</h3>
-      <p> <b>John</b> - {{ JohnCount }} of 6 Tasks Completed</p>
-      <button v-on:click="JohnCount += 1" v-bind:disabled="JohnCount==6">Task Completed</button>
-    </div>
-  </div>
-
-<!-- Sammie Card -->
-<div class="row">
-  <div class="column">
-    <div class="card">
-      <h3>Sammie</h3>
-      <b>Sammie</b> - {{ SammieCount }} of 5 Tasks Completed</p>
-        <button v-on:click="SammieCount += 1" v-bind:disabled="SammieCount==5">Task Completed</button>
-    </div>
-  </div>
+    <!-- Sammie Card -->
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <h3>Sammie</h3>
+          <img src="https://www.edubloxtutor.com/wp-content/uploads/2017/12/Smartphone.jpg"  alt="Photo of Sammie" width="400" height="300">
+          <br>
+          <p> <b>Sammie</b> - {{ SammieCount }} of 5 Tasks Completed</p>
+            <button class="button" v-on:click="SammieCount += 1" v-bind:disabled="SammieCount==5">Task Completed</button>
+        </div>
+      </div>
+      </div>
+</main>
 
 
+<!-- New Task Page -->
+<main v-bind:hidden="pageName != 'newtask'">
+        <!--  Big Banner -->
+            <div class="header">
+              <h1>Connected Home</h1>
+              <p>📘 📘 This is where you are going to create a new task! 📘 📘</p>
+            </div>
 
+
+<div class="card">
+            <!-- https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_select -->
+            <h2>Create a New Task</h2>
+            <p>This <strong>will create</strong> a task for a selected child!</p>
+            <p>Select Child to Assign Task 📇 </p>
+            <select>
+                <option value="Emma">Emma</option>
+                <option value="John">John</option>
+                <option value="Sammie">Sammie</option>
+            </select>
+            <form>
+              Task Description:🖖<br>
+              <input type="text" name="Task Description"><br>
+              Reward for Completion:🖖<br>
+              <input type="text" name="Reward for Completion">
+            </form>
 
 </div>
+</main>
+
+
+
+<!-- New Task Page -->
+<main v-bind:hidden="pageName != 'about'">
+  <!--  Big Banner -->
+      <div class="header">
+        <h1>Connected Home</h1>
+        <p>🧠 🧠 This is where you will go to learn more about Connected Home! 🧠 🧠</p>
+
+        <div class="row">
+            <div class="card">
+              <h4>This is an application designed concepted for an Android device.</h4>
+              <p>Click <a href="https://invis.io/VWE0U9MYZ">here</a> to go to my prototype.</p>
+            </div>
+          </div>
+          </div>
+
+      </div>
+</main>
+
+
+
+
+
+
     <script src="./dist/main.js" type="text/javascript"></script>
 
   </body>
