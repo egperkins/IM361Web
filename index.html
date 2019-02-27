@@ -32,10 +32,10 @@
           <div class="column">
             <div class="card">
               <h3>Emma</h3>
-              <img src="https://media.defense.gov/2018/Feb/09/2001875923/780/780/0/180205-F-PJ007-1001.JPG" alt="Photo of Emma" style="width:400px;height:300px;">
+              <img src="https://media.defense.gov/2018/Feb/09/2001875923/780/780/0/180205-F-PJ007-1001.JPG" alt="Photo of Emma" style="width:300px;height:200px;">
               <br>
-                <p> <b>Emma</b> - {{ EmmaCount }} of 5 Tasks Completed</p>
-              <button class="button" v-on:click="EmmaCount += 1" v-bind:disabled="EmmaCount==5">Task Completed</button>
+                <p> <b>Emma</b> - {{ EmmaCompleteCount }} of {{ EmmaTaskCount }} Tasks Completed</p>
+              <button class="button" v-on:click="EmmaCompleteCount += 1" v-bind:disabled="EmmaCompleteCount==EmmaTaskCount">Task Completed</button>
             </div>
           </div>
     <!-- John Card -->
@@ -43,10 +43,10 @@
       <div class="column">
         <div class="card">
           <h3>John</h3>
-          <img src="https://ak2.picdn.net/shutterstock/videos/12027212/thumb/1.jpg" alt="Photo of John" width="400" height="300">
+          <img src="https://ak2.picdn.net/shutterstock/videos/12027212/thumb/1.jpg" alt="Photo of John" width="300" height="200">
           <br>
-          <p> <b>John</b> - {{ JohnCount }} of 6 Tasks Completed</p>
-          <button class="button" v-on:click="JohnCount += 1" v-bind:disabled="JohnCount==6">Task Completed</button>
+          <p> <b>John</b> - {{ JohnCompleteCount }} of {{ JohnTaskCount }} Tasks Completed</p>
+          <button class="button" v-on:click="JohnCompleteCount += 1" v-bind:disabled="JohnCompleteCount==JohnTaskCount">Task Completed</button>
         </div>
       </div>
     <!-- Sammie Card -->
@@ -54,10 +54,10 @@
       <div class="column">
         <div class="card">
           <h3>Sammie</h3>
-          <img src="https://www.edubloxtutor.com/wp-content/uploads/2017/12/Smartphone.jpg"  alt="Photo of Sammie" width="400" height="300">
+          <img src="https://www.edubloxtutor.com/wp-content/uploads/2017/12/Smartphone.jpg"  alt="Photo of Sammie" width="300" height="200">
           <br>
-          <p> <b>Sammie</b> - {{ SammieCount }} of 5 Tasks Completed</p>
-            <button class="button" v-on:click="SammieCount += 1" v-bind:disabled="SammieCount==5">Task Completed</button>
+          <p> <b>Sammie</b> - {{ SammieCompleteCount }} of {{ SammieTaskCount }} Tasks Completed</p>
+            <button class="button" v-on:click="SammieCompleteCount += 1" v-bind:disabled="SammieCompleteCount==SammieTaskCount">Task Completed</button>
         </div>
       </div>
       </div>
@@ -73,27 +73,24 @@
             </div>
 
 
-<div class="card">
-            <!-- https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_select -->
-            <h2>Create a New Task</h2>
-            <p>This <strong>will create</strong> a task for a selected child!</p>
-            <p>Select Child to Assign Task 📇 </p>
-            <select>
-                <option value="Emma">Emma</option>
-                <option value="John">John</option>
-                <option value="Sammie">Sammie</option>
-            </select>
-            <form>
-              Task Description:🖖<br>
-              <input type="text" name="Task Description"><br>
-              Reward for Completion:🖖<br>
-              <input type="text" name="Reward for Completion">
-            </form>
-            <button class="button" v-on:click="SammieCount += 1" v-bind:disabled="SammieCount==5">Task Completed</button>
-
-
-
-</div>
+          <div class="card">
+                      <!-- https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_select -->
+                      <h2>Create a New Task</h2>
+                      <p>This <strong>will create</strong> a task for a selected child!</p>
+                      <p>Select Child to Assign Task 📇 </p>
+                      <select>
+                          <option value="Emma">Emma</option>
+                          <option value="John">John</option>
+                          <option value="Sammie">Sammie</option>
+                      </select>
+                      <form>
+                        Task Description:🖖<br>
+                        <input type="text" name="Task Description"><br>
+                        Reward for Completion:🖖<br>
+                        <input type="text" name="Reward for Completion">
+                      </form>
+                      <button class="button" v-on:click="EmmaTaskCount += 1" >Submit Task</button>
+          </div>
 </main>
 
 

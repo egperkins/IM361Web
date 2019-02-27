@@ -15,16 +15,19 @@ var app = new Vue({
 
     //Page Titles
     pageName:"home",
-    pageName:"newtask",
-    pageName:"about",
-
 
     // Child Count
-      EmmaCount: 0,
-      JohnCount: 0,
-      SammieCount: 0,
+      EmmaCompleteCount: 2,
+      JohnCompleteCount: 0,
+      SammieCompleteCount: 0,
 
-      EmmaTaskCount:0,
+      EmmaTaskCount:3,
+      JohnTaskCount: 0,
+      SammieTaskCount: 2,
+
+      EmmaRewardCount: 0,
+      JohnRewardCount: 0,
+      SammieRewardCount:0,
 
   }
 });

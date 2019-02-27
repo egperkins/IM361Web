@@ -1,7 +1,4 @@
-<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
-
+@import url('https://fonts.googleapis.com/css?family=Coiny|Fjalla+One|Roboto');
 /* Style the body   https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_style_header */
 body {
   font-family: Arial;
@@ -104,8 +101,6 @@ input{
 
 }
 
-
-
 .Welcome{
   padding: 5px;
   text-align: center;
@@ -138,7 +133,6 @@ input{
   font-size: 20px;
 }
 
-
 /* Style the counter cards W3Schools */
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -147,15 +141,12 @@ input{
   background-color: #f1f1f1;
 
 }
-
 /* Cards Side by Side */
 .column {
   float: left;
   width: 32%;
   padding: 0 10px;
 }
-
-
 /* Style Buttons */
 .button {
   background-color: #2D5A77;
