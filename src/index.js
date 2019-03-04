@@ -7,28 +7,30 @@ import "./style.css";
 
 var app = new Vue({
 
+  methods: {
 
+
+  },
 
 
   el: '#app',
   data: {
+      ChildChosen: " Emma ",
+      RewardChosen:" $2 ",
+      TaskChosen: "Clean Bedroom",
 
+      display: 'false',
     //Page Titles
-    pageName:"home",
+      pageName:"home",
 
     // Child Count
       EmmaCompleteCount: 2,
-      JohnCompleteCount: 0,
-      SammieCompleteCount: 0,
+      JohnCompleteCount: 1,
+      SammieCompleteCount:2,
 
       EmmaTaskCount:3,
-      JohnTaskCount: 0,
-      SammieTaskCount: 2,
-
-      EmmaRewardCount: 0,
-      JohnRewardCount: 0,
-      SammieRewardCount:0,
-
+      JohnTaskCount: 4,
+      SammieTaskCount: 6,
   }
 });
 

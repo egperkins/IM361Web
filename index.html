@@ -1,4 +1,7 @@
 <!doctype html>
+
+
+
 <html lang="en-US">
   <head>
     <meta charset="utf-8">
@@ -21,7 +24,7 @@
     <!--  Big Banner -->
         <div class="header">
           <h1>Connected Home</h1>
-          <p>This is a paragraph that explains how to use Connected Home to assign chores to your family.</p>
+          <h5>You can use Connected Home to communicate tasks between Gaurdian and Child.</h5>
         </div>
     <!--  Welcome to the site -->
         <div class="Welcome">
@@ -63,53 +66,67 @@
       </div>
 </main>
 
-
 <!-- New Task Page -->
 <main v-bind:hidden="pageName != 'newtask'" class="animated">
         <!--  Big Banner -->
             <div class="header">
               <h1>Connected Home</h1>
-              <p>This is where you are going to create a new task!</p>
+              <h5>This is where you are going to create a new task!</h5>
             </div>
-
-
           <div class="card">
                       <!-- https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_select -->
                       <h2>Create a New Task</h2>
-                      <p>This <strong>will create</strong> a task for Emma for now!</p>
-                      <p>Select Child to Assign Task </p>
-                      <select>
-                          <option value="Emma">Emma</option>
-                          <option value="John">John</option>
-                          <option value="Sammie">Sammie</option>
-                      </select>
-                      <form>
-                        Task Description:<br>
-                        <input type="text" name="Task Description"><br>
-                        Reward for Completion:<br>
-                        <input type="text" name="Reward for Completion">
-                      </form>
-                      <button class="button" v-on:click="EmmaTaskCount += 1" >Submit Task</button> <!-- make it take the selection-->
+                      <h3> Select a child to assign the task!</h3>
+                      <!-- Who gets the Task -->
+                      <button class="button" v-on:click="ChildChosen = 'Emma'"  > Emma </button>
+                      <button class="button" v-on:click="ChildChosen = 'John'"> John </button>
+                      <button class="button" v-on:click="ChildChosen = 'Sammie'"> Sammie </button>
           </div>
+
+          <div class="card">
+                      <!-- Describe the Task -->
+                      <h3>Choose the Task </h3>
+                      <button class="button" v-on:click="TaskChosen = 'Clean Bedroom'"  > Clean Bedroom </button>
+                      <button class="button" v-on:click="TaskChosen = 'Mow Lawn'"> Mow Lawn </button>
+                      <button class="button" v-on:click="TaskChosen = 'Do Laundry'"> Do Laundry </button>
+          </div>
+
+          <div class="card">
+                      <!-- Add a Reward -->
+                      <h3>Select a Reward </h3>
+                      <button class="button" v-on:click="RewardChosen = ' $1 '"  > $1 </button>
+                      <button class="button" v-on:click="RewardChosen = ' $2 '"> $2 </button>
+                      <button class="button" v-on:click="RewardChosen = ' $3 '"> $3 </button>
+          <div>
+                      <!-- Submit the Task Assignment -->
+                      <br>
+          <div class="card"  >
+                      <p> <strong> {{ ChildChosen }} </strong> will be assigned the task to  <strong> {{TaskChosen}} </strong> with the reward of <strong>{{RewardChosen}} </strong> </p>
+          </div>
+          <button class="button" type="button" v: onclick= "{{ChildChosen}}" >Assign Task</button>
 </main>
 
 
 
-<!-- New Task Page -->
+<!-- About Page -->
 <main v-bind:hidden="pageName != 'about'" class="animated">
   <!--  Big Banner -->
       <div class="header">
         <h1>Connected Home</h1>
-        <p>This is where you will go to learn more about Connected Home!</p>
+        <h5>This is where you will go to learn more about Connected Home!</h5>
 
         <div class="row">
             <div class="card">
-              <h4>This is an application designed concepted for an Android device.</h4>
-              <p>Click <a href="https://invis.io/VWE0U9MYZ">here</a> to go to my prototype.</p>
+              <p>This is an application designed concepted for an Android device.</p>
+              <h4>Click <a href="https://invis.io/VWE0U9MYZ">here</a> to go to my prototype.</h4>
+            </div>
+            <br>
+            <div class="card">
+              <p>This application is designed to create a space where gaurdians and child can keep track of tasks in the household.</p>
+              <h4> Chores can be assigned by the gaurdian and completed by the child!</h4>
             </div>
           </div>
           </div>
-
       </div>
 </main>
 
@@ -118,7 +135,9 @@
 
 
 
-    <script src="./dist/main.js" type="text/javascript"></script>
+    <script
+    src="./dist/main.js" type="text/javascript">
+  </script>
 
   </body>
 </html>
